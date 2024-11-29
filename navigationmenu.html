@@ -1,0 +1,222 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Navigation Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #4CAF50, #2196F3);
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation Items */
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar ul li {
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar ul li a.active {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dropdown Menu */
+        .navbar ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 150px;
+            z-index: 1;
+        }
+
+        .navbar ul li .dropdown a {
+            color: #333;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .navbar ul li .dropdown a:hover {
+            background: #f4f4f9;
+        }
+
+        /* Show dropdown on hover */
+        .navbar ul li:hover .dropdown {
+            display: block;
+        }
+
+        /* Logo */
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        section h2 {
+            color: #333;
+        }
+
+        section p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .navbar ul li .dropdown {
+                position: static;
+                box-shadow: none;
+            }
+
+            section {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <!-- Logo -->
+        <a href="#" class="logo">MyWebsite</a>
+
+        <!-- Menu -->
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li>
+                <a href="#more">More ▼</a>
+                <div class="dropdown">
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to My Website</h2>
+        <p>
+            This is a modern, interactive website designed to showcase all the services and solutions we offer. 
+            From web development to digital marketing, we provide end-to-end solutions tailored to your needs.
+        </p>
+        <p>
+            Feel free to explore our website and reach out through the contact section for inquiries.
+        </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            We are a team of passionate professionals dedicated to delivering high-quality solutions. Our expertise 
+            spans across multiple domains, ensuring you receive the best results every time.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Web Design and Development</li>
+            <li>App Development</li>
+            <li>Digital Marketing</li>
+            <li>SEO Optimization</li>
+            <li>Content Creation</li>
+        </ul>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+        <h2>Our Location</h2>
+        <p>
+            Visit us at:
+            <br>123 Tech Street,
+            <br>Innovation City, TX 75001
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            <strong>Email:</strong> info@mywebsite.com<br>
+            <strong>Phone:</strong> +1 (123) 456-7890
+        </p>
+        <p>
+            You can also fill out our <a href="#contact-form">contact form</a> for detailed inquiries.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 MyWebsite. All rights reserved.
+    </footer>
+
+</body>
+</html>
